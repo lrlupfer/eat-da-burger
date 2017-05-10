@@ -3,14 +3,14 @@
 <h2>Burgers that are not yet devoured</h2>
 
 <ul>
-  {{#each burgers}}
+  {{#each burger}}
     {{#unless this.devoured}}
       <li>
         {{this.burger_name}}
 
-        {{> burgers/devoured-burger}}
+        {{> devoured-burger}}
 
-        {{> burgers/delete-burger}}
+        {{> delete-burger}}
       </li>
     {{/unless}}
   {{/each}}
@@ -19,14 +19,14 @@
 <h2>Devoured burgers!</h2>
 
 <ul>
-  {{#each burgers}}
+  {{#each burger}}
     {{#if this.devoured}}
       <li>
         {{this.burger_name}}
 
-				{{> burgers/devoured-burger}}
+				{{> devoured-burger}}
 
-        {{> burgers/delete-burger}}
+        {{> delete-burger}}
       </li>
     {{/if}}
   {{/each}}
